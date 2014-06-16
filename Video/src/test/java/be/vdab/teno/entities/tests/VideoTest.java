@@ -1,4 +1,4 @@
-package be.vdab.teno.entites.tests;
+package be.vdab.teno.entities.tests;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;

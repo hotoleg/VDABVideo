@@ -1,4 +1,4 @@
-package be.vdab.teno.entites.tests;
+package be.vdab.teno.entities.tests;
 
 import static org.mockito.Mockito.*;
 
