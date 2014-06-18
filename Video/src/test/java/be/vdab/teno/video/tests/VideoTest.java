@@ -1,10 +1,9 @@
-package be.vdab.teno.entities.tests;
+package be.vdab.teno.video.tests;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import be.vdab.teno.video.entities.IVideo;
@@ -12,7 +11,6 @@ import be.vdab.teno.video.enums.Genre;
 import be.vdab.teno.video.services.IVideoService;
 
 
-@Ignore
 public class VideoTest {
 
 	private IVideoService videoService;
@@ -29,7 +27,7 @@ public class VideoTest {
 	@Before
 	public void setUp() throws Exception {
 		//TODO:
-		//videoService = new videoServiceImpl();				
+		//videoService = new videoServiceImpl();		
 	}
 
 	@After

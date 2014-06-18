@@ -1,4 +1,4 @@
-package be.vdab.teno.entities.tests;
+package be.vdab.teno.video.tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
