@@ -1,5 +1,7 @@
 package be.vdab.teno.video.entities;
 
+import java.util.List;
+
 import be.vdab.teno.video.enums.Genre;
 
 public interface IVideo {
@@ -8,5 +10,7 @@ public interface IVideo {
 	String setNaam();
 	Double getPrijs();
 	Genre getGenre();
+	List<IExemplaar> getExemplaren();
+	int countBeschikbareExemplaren();
 		
 }

@@ -7,16 +7,50 @@
 	<packaging>war</packaging>
 	<name>Video</name>
 	<description>Test voor de opleiding Java.</description>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<port>8088</port>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.8.4</version>
+		<dependency> <!-- gebruik servlets -->
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>[3,]</version>
+			<scope>provided</scope>
 		</dependency>
-		<dependency>
+		<dependency> <!-- gebruik JSP’s -->
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>[2.2,]</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency> <!-- gebruik JSTL -->
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>[1.1,]</version>
+		</dependency>
+		<dependency> <!-- ook voor JSTL -->
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>[1.1,]</version>
+		</dependency>
+		<dependency> <!-- JUnit test framework -->
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
+		</dependency>
+		<dependency> <!-- Mockito framework voor het aanmaken van mock objecten tijdens unit testen -->
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.8.4</version>
 		</dependency>
 	</dependencies>
 </project>
