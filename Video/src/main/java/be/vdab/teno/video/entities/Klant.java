@@ -27,4 +27,14 @@ public class Klant implements IKlant{
 		return null;
 	}
 
+	public String getKlantennummer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean valideerPincode(String pincode) {
+		// TODO Valideer de pincode
+		return true;
+	}
+
 }

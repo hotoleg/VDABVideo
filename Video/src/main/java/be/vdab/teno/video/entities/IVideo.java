@@ -6,11 +6,12 @@ import be.vdab.teno.video.enums.Genre;
 
 public interface IVideo {
 	int getId();
-	String getNaam();
-	String setNaam();
+	String getTitel();
+	String getOmschrijving();
+	void setNaam();
 	Double getPrijs();
 	Genre getGenre();
 	List<IExemplaar> getExemplaren();
-	int countBeschikbareExemplaren();
+	int getAantalBeschikbareExemplaren();
 		
 }

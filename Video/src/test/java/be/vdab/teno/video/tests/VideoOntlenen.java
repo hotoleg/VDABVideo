@@ -27,7 +27,7 @@ public class VideoOntlenen {
 		final IExemplaar exemplaar = mock(IExemplaar.class);
 		
 		when(video.getId()).thenReturn(VIDEO_ID);
-		when(video.countBeschikbareExemplaren()).thenReturn(3);
+		when(video.getAantalBeschikbareExemplaren()).thenReturn(3);
 		when(video.getExemplaren()).thenReturn(new LinkedList<IExemplaar>() {{ 
 			add(exemplaar);
 			add(exemplaar);
@@ -47,7 +47,7 @@ public class VideoOntlenen {
 			
 		IVideo video = mock(IVideo.class);
 		when(video.getId()).thenReturn(VIDEO_ID);
-		when(video.countBeschikbareExemplaren()).thenReturn(0);
+		when(video.getAantalBeschikbareExemplaren()).thenReturn(0);
 				
 		IOntlening ontlening = klant.ontleen(video);
 		

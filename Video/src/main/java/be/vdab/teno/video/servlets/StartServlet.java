@@ -12,17 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class GenreServlet
  */
-@WebServlet("/")
-public class IndexServlet extends HttpServlet {
+@WebServlet("/start")
+public class StartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String VIEW = "/WEB-INF/JSP/views/Index.jsp";
+	private static final String VIEW = "/WEB-INF/JSP/views/Start.jsp";
 	
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
 		dispatcher.forward(request, response);
 	}

@@ -48,7 +48,7 @@ public class VideoTest {
 		
 		Assert.assertEquals("Het ID is niet correct.", ID_OF_TEST_VIDEO, video.getId());
 		Assert.assertEquals("Het genre is niet correct.", expectedGenre, video.getGenre());
-		Assert.assertEquals("De naam is niet correct.", expectedNaam, video.getNaam());
+		Assert.assertEquals("De naam is niet correct.", expectedNaam, video.getTitel());
 		Assert.assertEquals("De prijs is niet correct.", expectedPrijs, video.getPrijs());				
 	}
 	
