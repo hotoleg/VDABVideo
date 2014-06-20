@@ -1,4 +1,4 @@
-package be.vdab.teno.video.tests;
+package be.vdab.teno.video.entities.tests;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -12,6 +12,7 @@ import org.junit.Test;
 
 import be.vdab.teno.video.entities.IMandje;
 import be.vdab.teno.video.entities.IVideo;
+import be.vdab.teno.video.entities.impl.Mandje;
 
 public class MandjeTests {
 
@@ -26,9 +27,8 @@ public class MandjeTests {
 	}
 
 	@Before
-	public void setUp() throws Exception {
-		//TODO:
-		//mandje = new Mandje();
+	public void setUp() throws Exception {	
+		mandje = new Mandje();
 	}
 
 	@After
@@ -95,10 +95,5 @@ public class MandjeTests {
 		
 		Assert.assertEquals(totaal, resultaat);
 		
-		
-		
 	}
-	
-	
-
 }

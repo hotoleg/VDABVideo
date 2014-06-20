@@ -1,4 +1,8 @@
-package be.vdab.teno.video.entities;
+package be.vdab.teno.video.entities.impl;
+
+import be.vdab.teno.video.entities.IKlant;
+import be.vdab.teno.video.entities.IOntlening;
+import be.vdab.teno.video.entities.IVideo;
 
 public class Klant implements IKlant{
 
@@ -35,6 +39,5 @@ public class Klant implements IKlant{
 	public Boolean valideerPincode(String pincode) {
 		// TODO Valideer de pincode
 		return true;
-	}
-
+	}	
 }
