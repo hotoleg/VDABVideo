@@ -10,7 +10,7 @@ import be.vdab.teno.video.services.IDaoFactory;
  * 
  * @author stijn
  *
- * Factory bedoeld om te gebruiken in Unit testen. Deze laat toe om 
+ * Factory bedoeld om te gebruiken in Unit testen. Deze laat toe om vooraf aangeleverde mock Dao's te injecteren. 
  *
  */
 public class TestDaoFactory implements IDaoFactory {

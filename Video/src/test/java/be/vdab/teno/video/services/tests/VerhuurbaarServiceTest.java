@@ -2,7 +2,6 @@ package be.vdab.teno.video.services.tests;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -10,7 +9,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import be.vdab.teno.video.dao.IVerhuurbaarDao;
 import be.vdab.teno.video.entities.IVerhuurbaar;

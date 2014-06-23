@@ -6,10 +6,10 @@ public interface IMandje {
 	void reset();
 	IKlant getKlant();	
 	Set<IBestellijn> getBestellijnen();	
-	Set<IVideo> getVideos();
-	Integer getAantalVoor(IVideo video);
-	void voegToe(IVideo video);
-	void verwijder(IVideo video);
+	Set<IVerhuurbaar> getItems();
+	Integer getAantalVoor(IVerhuurbaar video);
+	void voegToe(IVerhuurbaar video);
+	void verwijder(IVerhuurbaar video);
 	Double getTotaalPrijs();
-	int getAantalVideosInMandje(); 
+	int getAantalItemsInMandje(); 
 }

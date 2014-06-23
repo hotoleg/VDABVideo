@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import be.vdab.teno.video.entities.IBoek;
 import be.vdab.teno.video.entities.IMandje;
 import be.vdab.teno.video.entities.IVideo;
 import be.vdab.teno.video.entities.impl.Mandje;
@@ -39,7 +40,7 @@ public class MandjeTests {
 	@Test
 	public void mandjeNaInit() {
 		Assert.assertEquals((Double)0.0, mandje.getTotaalPrijs());
-		Assert.assertEquals( 0, mandje.getAantalVideosInMandje());
+		Assert.assertEquals( 0, mandje.getAantalItemsInMandje());
 		
 		IVideo video  = mock(IVideo.class);
 		
@@ -47,18 +48,74 @@ public class MandjeTests {
 		mandje.reset();
 		
 		Assert.assertEquals((Double)0.0, mandje.getTotaalPrijs());
-		Assert.assertEquals( 0, mandje.getAantalVideosInMandje());				
+		Assert.assertEquals( 0, mandje.getAantalItemsInMandje());				
 	}
 	
 	@Test
-	public void videoToevoegenAanMandje() {
+	public void videoToevoegenAanMandje_1() {
 		IVideo video  = mock(IVideo.class);
 		
 		mandje.voegToe(video);
 		
-		Assert.assertEquals("Er werd 1 video verwacht in het mandje" ,1, mandje.getAantalVideosInMandje());		
+		Assert.assertEquals("Er werd 1 video verwacht in het mandje" ,1, mandje.getAantalItemsInMandje());		
 		
 	}
+	
+	@Test
+	public void itemsToevoegenAanMandje_3() {
+		IVideo video1  = mock(IVideo.class);
+		IVideo video2  = mock(IVideo.class);
+		IBoek boek1 = mock(IBoek.class);
+		
+		mandje.voegToe(video1);
+		mandje.voegToe(video2);
+		mandje.voegToe(boek1);
+		
+		Assert.assertEquals("Er werden 3 items verwacht in het mandje" ,3, mandje.getAantalItemsInMandje());		
+		
+	}
+	
+	@Test
+	public void videoVerwijderenAanMandje_3() {
+		IVideo video1  = mock(IVideo.class);
+		IVideo video2  = mock(IVideo.class);
+		IBoek boek1 = mock(IBoek.class);
+		
+		mandje.voegToe(video1);
+		mandje.voegToe(video2);
+		mandje.voegToe(boek1);
+		
+		Assert.assertEquals("Er werden 3 items verwacht in het mandje" ,3, mandje.getAantalItemsInMandje());		
+			
+		
+		mandje.verwijder(video1);
+		
+		Assert.assertEquals("Er werden 2 items verwacht in het mandje" ,2, mandje.getAantalItemsInMandje());
+		
+		
+		
+	}
+	
+	
+
+	@Test
+	public void videoToevoegenAanMandje_3en1() {
+		IVideo video1  = mock(IVideo.class);
+		IVideo video2  = mock(IVideo.class);
+		IBoek boek1 = mock(IBoek.class);
+		
+		mandje.voegToe(video1);
+		mandje.voegToe(video2);
+		mandje.voegToe(boek1);
+		mandje.voegToe(video1);
+		
+		Assert.assertEquals("Er werden 3 items verwacht in het mandje" ,3, mandje.getAantalItemsInMandje());		
+		Assert.assertEquals("Er werden 2 exemplaren verwacht" ,(Integer)2, mandje.getAantalVoor(video1));		
+		Assert.assertEquals("Er werd 1 exemplaren verwacht" ,(Integer)1, mandje.getAantalVoor(video2));		
+		Assert.assertEquals("Er werd 1 exemplaren verwacht" ,(Integer)1, mandje.getAantalVoor(boek1));		
+		
+	}
+	
 	
 	@Test
 	public void totaalprijs_10_10_20(){
