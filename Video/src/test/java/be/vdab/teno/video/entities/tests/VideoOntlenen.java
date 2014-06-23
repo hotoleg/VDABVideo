@@ -50,8 +50,7 @@ public class VideoOntlenen {
 		when(video.getAantalBeschikbareExemplaren()).thenReturn(0);
 				
 		IOntlening ontlening = klant.ontleen(video);
-		
-		//Assert.fail("klant.ontleen(video) had een fout moeten gooien.");					
+		//Vorige regel zou een fout moeten gooien. Geen verdere assumpties zijn nodig.
 	}
 	
 	
