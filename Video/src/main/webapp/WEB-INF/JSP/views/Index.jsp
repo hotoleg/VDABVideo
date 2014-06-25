@@ -19,9 +19,9 @@
 		</div>
 		<input type="submit" value="Begin">
 	</form>
-	<div style="margin-left:500px">
+	<div style="margin-left:300px">
 		<div align="left" style="background-color: aqua;">
-			<p>Deze applicatie is volop in ontwikkeling. Uw apdracht, als u
+			<p>Deze applicatie is volop in ontwikkeling. Uw opdracht, als u
 				kiest deze te aanvaarden, is om deze zo volledig mogelijk af te
 				werken.</p>
 			<p>
